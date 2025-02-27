@@ -1,0 +1,32 @@
+﻿<Window x:Class="LenovoSerialToModelNumber.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LenovoSerialToModelNumber"
+        mc:Ignorable="d"
+        Title="LenovoSerialToModelNumber" Height="300" Width="400"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}">
+    <Grid>
+        <TextBox Name="SerialNumberTextBox" Width="200" Height="30" Margin="10,10,10,0" VerticalAlignment="Top" TextAlignment="Center"/>
+        <Button Content="Get Model Number" Width="200" Height="30" Margin="10,50,10,0" VerticalAlignment="Top" Click="FetchDataButton_Click"/>
+        <TextBlock Name="StatusTextBlock" Width="350" Height="30" Margin="10,100,10,0" VerticalAlignment="Top"/>
+        <Button Content="Create New CSV File" Width="200" Height="30" Margin="10,150,10,0" VerticalAlignment="Top" Click="CreateCsvButton_Click"/>
+        
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10,0,10,10">
+            <TextBlock.Inlines>
+                <Run Text="Created by " />
+                <Hyperlink NavigateUri="https://github.com/j4asper/LenovoSerialToModelNumber" RequestNavigate="Hyperlink_RequestNavigate">
+                    <Run Text="Jasper O. C." />
+                </Hyperlink>
+            </TextBlock.Inlines>
+        </TextBlock>
+    </Grid>
+</Window>
